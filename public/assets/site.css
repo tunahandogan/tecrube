@@ -190,6 +190,9 @@ html{scrollbar-color:var(--blue-200) var(--blue-50)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .form-status{font-size:.9rem;font-weight:600;color:var(--danger);min-height:0}
 .form-status:empty{display:none}
+.form-status.is-offline{display:grid;gap:10px;padding:14px;border-radius:var(--radius);background:#e5f6ee;color:var(--navy-900);font-weight:500}
+.btn-wa{background:#1a8f4f;color:var(--white)}
+.btn-wa:hover{background:#157a43}
 .form-success{text-align:center;padding:24px 4px 4px}
 .form-success:focus{outline:none}
 .success-icon{display:inline-grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#e5f6ee;color:var(--success);margin-bottom:16px}

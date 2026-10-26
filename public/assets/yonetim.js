@@ -8,6 +8,7 @@ let entries = [], filter = 'hepsi', query = '';
 
 async function api(path, options = {}){
   const res = await fetch(path, {...options, headers:{'Content-Type':'application/json', 'X-Admin-Password':password, ...options.headers}});
+  if ([404, 405, 501].includes(res.status)) throw new Error('Yönetim paneli bu barındırmada çalışmıyor: ön kayıt sunucusu (npm start) ya da veritabanı bağlantısı gerekir.');
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw Object.assign(new Error(data.error || 'İşlem tamamlanamadı.'), {status:res.status});
   return data;

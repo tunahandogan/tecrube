@@ -176,9 +176,20 @@ if (form){
     if (input.getAttribute('aria-invalid') === 'true') showError(name, validate()[name]);
   }));
 
+  function offerWhatsApp(){
+    const note = $('#f-not', form)?.value.trim();
+    const text = ['Merhaba, ön kayıt bırakmak istiyorum.', `Ad soyad: ${fields.ad.value.trim()}`, `Telefon: ${fields.telefon.value.trim()}`, `Program: ${fields.program.value}`, note && `Not: ${note}`].filter(Boolean).join('\n');
+    status.classList.add('is-offline');
+    status.replaceChildren(
+      Object.assign(document.createElement('span'), {textContent:'Form şu an doğrudan iletilemiyor. Bilgileriniz hazır; tek dokunuşla WhatsApp\'tan gönderebilirsiniz.'}),
+      Object.assign(document.createElement('a'), {className:'btn btn-wa btn-block', href:`https://wa.me/905526329128?text=${encodeURIComponent(text)}`, target:'_blank', rel:'noopener', textContent:'WhatsApp ile gönder'})
+    );
+    status.querySelector('a').focus();
+  }
+
   form.addEventListener('submit', async e => {
     e.preventDefault();
-    status.textContent = '';
+    status.textContent = ''; status.classList.remove('is-offline');
     const errors = validate();
     Object.keys(fields).forEach(name => showError(name, errors[name]));
     const first = Object.keys(fields).find(name => errors[name]);
@@ -191,6 +202,8 @@ if (form){
         method:'POST', headers:{'Content-Type':'application/json'},
         body:JSON.stringify({ad:fields.ad.value, telefon:fields.telefon.value, program:fields.program.value, not:$('#f-not', form)?.value || '', kvkk:fields.kvkk.checked, website:$('#f-website', form).value})
       });
+      // Statik barındırmada (ör. Vercel) ön kayıt sunucusu yoktur: başvuru WhatsApp'a aktarılır
+      if ([404, 405, 501].includes(res.status)){ offerWhatsApp(); return; }
       const data = await res.json().catch(() => ({}));
       if (!res.ok){
         Object.entries(data.fields || {}).forEach(([name, msg]) => fields[name] && showError(name, msg));
@@ -199,7 +212,8 @@ if (form){
       const success = form.nextElementSibling;
       form.hidden = true; success.hidden = false; success.focus();
     } catch (err) {
-      status.textContent = (err instanceof TypeError ? 'Bağlantı kurulamadı.' : err.message) + ' Dilerseniz 0442 442 52 25 numarasından bize ulaşın.';
+      if (err instanceof TypeError){ offerWhatsApp(); return; }
+      status.textContent = `${err.message} Dilerseniz 0442 442 52 25 numarasından bize ulaşın.`;
     } finally {
       submit.removeAttribute('aria-busy'); submit.disabled = false;
       $('span', submit).textContent = 'Ön kaydımı gönder';
