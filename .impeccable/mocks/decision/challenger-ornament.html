@@ -1,0 +1,25 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Desen Programı</title>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Archivo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:#e8e0cf;color:#3d4148;font-family:Archivo,sans-serif;padding:32px 48px}
+.plate{border:1.5px solid #3d4148;height:836px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:72px 1fr 64px}
+header{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center;padding:0 28px;border-bottom:1.5px solid #3d4148}
+.logo{font-family:'Chakra Petch';font-weight:700;font-size:28px;letter-spacing:.1em}
+nav{display:flex;gap:28px;font-size:15px}
+.btn{background:#a5322a;color:#fff;padding:12px 18px;font-weight:700}
+.copy{padding:56px 40px;border-right:1.5px solid #3d4148}
+.no{font-family:'Chakra Petch';font-size:24px;color:#a5322a}
+h1{font-family:'Chakra Petch';font-weight:700;font-size:104px;line-height:.92;text-transform:uppercase;margin-top:24px}
+p{font-size:20px;line-height:1.5;margin-top:28px;max-width:520px}
+.units{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr)}
+.u{border:0 solid #3d4148;border-right-width:1.5px;border-bottom-width:1.5px;position:relative;display:flex;align-items:flex-end;padding:16px;font-family:'Chakra Petch';font-size:28px;font-weight:700}
+.u::before{content:"";position:absolute;inset:22%;background:conic-gradient(from 45deg,#3d4148 0 25%,transparent 0 50%,#3d4148 0 75%,transparent 0);opacity:.85}
+.u.r::before{background:conic-gradient(from 45deg,#a5322a 0 25%,transparent 0 50%,#a5322a 0 75%,transparent 0)}
+footer{grid-column:1/-1;border-top:1.5px solid #3d4148;display:flex;align-items:center;padding:0 28px;justify-content:space-between;font-family:'Chakra Petch';font-size:24px}
+</style></head><body><div class="plate">
+<header><div class="logo">ER TECRÜBE</div><nav><span>YKS</span><span>LGS</span><span>Kabin</span><span>İletişim</span></nav><span class="btn">Ön kayıt</span></header>
+<div class="copy"><div class="no">LEVHA 01 — ERZURUM</div><h1>Düzen,<br>emek,<br>tecrübe.</h1><p>YKS'de kabin sistemi ve özel ders. LGS'de sınıf dersleri ve özel ders. Koçluk, rehberlik, deneme sınavları.</p></div>
+<div class="units"><div class="u r">YKS</div><div class="u">Kabin</div><div class="u">Ders</div><div class="u">Koçluk</div><div class="u r">LGS</div><div class="u">Deneme</div><div class="u">Rehber</div><div class="u">Etüt</div><div class="u r">2020</div></div>
+<footer><span>0442 442 52 25</span><span>Yakutiye / Erzurum</span></footer>
+</div></body></html>

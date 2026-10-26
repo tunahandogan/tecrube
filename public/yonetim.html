@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0c1d5c">
+<title>Ön Kayıt Başvuruları | Tecrübe Yönetim</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/yonetim.css">
+<script src="/assets/yonetim.js" type="module"></script>
+</head>
+<body class="admin">
+<!-- @include header -->
+<main id="icerik" class="admin-main">
+  <section class="login" data-view="login">
+    <form class="login-card" id="login-form">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-mark"/></svg>
+      <h1>Yönetim paneli</h1>
+      <p>Ön kayıt başvurularını görmek için yönetim şifresini girin.</p>
+      <div class="field">
+        <label for="password">Şifre</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+      </div>
+      <p class="field-error" id="login-error" hidden></p>
+      <button class="btn btn-primary btn-block btn-lg" type="submit">Giriş yap</button>
+    </form>
+  </section>
+
+  <section class="dash" data-view="dash" hidden aria-labelledby="dash-title">
+    <div class="container">
+      <div class="dash-head">
+        <div>
+          <h1 id="dash-title">Ön kayıt başvuruları</h1>
+          <p id="dash-summary">Yükleniyor…</p>
+        </div>
+        <div class="dash-actions">
+          <button class="btn btn-outline" type="button" id="refresh">Yenile</button>
+          <button class="btn btn-outline" type="button" id="export">Excel'e aktar (CSV)</button>
+          <button class="btn btn-text" type="button" id="logout">Çıkış</button>
+        </div>
+      </div>
+      <div class="dash-tools">
+        <div class="filters" role="group" aria-label="Duruma göre filtrele">
+          <button type="button" data-filter="hepsi" aria-pressed="true">Tümü <span data-count="hepsi">0</span></button>
+          <button type="button" data-filter="yeni" aria-pressed="false">Yeni <span data-count="yeni">0</span></button>
+          <button type="button" data-filter="arandi" aria-pressed="false">Arandı <span data-count="arandi">0</span></button>
+          <button type="button" data-filter="kayit" aria-pressed="false">Kayıt oldu <span data-count="kayit">0</span></button>
+          <button type="button" data-filter="olumsuz" aria-pressed="false">Olumsuz <span data-count="olumsuz">0</span></button>
+        </div>
+        <label class="search"><span class="sr-only">Ad, telefon veya programda ara</span><input type="search" id="search" placeholder="Ad, telefon, program ara"></label>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th scope="col">Tarih</th><th scope="col">Ad soyad</th><th scope="col">Telefon</th><th scope="col">Program</th><th scope="col">Not</th><th scope="col">Durum</th><th scope="col"><span class="sr-only">İşlemler</span></th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+        <div class="empty" id="empty" hidden>
+          <h2>Henüz başvuru yok.</h2>
+          <p>Sitedeki ön kayıt formundan gelen başvurular burada listelenecek.</p>
+        </div>
+      </div>
+      <p class="admin-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

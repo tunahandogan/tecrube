@@ -1,0 +1,12 @@
+{
+  "name": "er-tecrube", "version": "1.0.0", "private": true, "type": "module",
+  "description": "Tecrübe Kurs Merkezi (Erzurum) — LGS ve YKS hazırlık sitesi ve ön kayıt paneli",
+  "scripts": {
+    "dev": "node scripts/server.mjs",
+    "start": "node scripts/server.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node --check public/assets/site.js && node --check public/assets/yonetim.js && node --check scripts/server.mjs && node --check scripts/build.mjs",
+    "verify": "python scripts/verify.py"
+  },
+  "engines": { "node": ">=20" }
+}

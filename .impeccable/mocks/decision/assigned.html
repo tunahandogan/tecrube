@@ -1,0 +1,48 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Ders Programı</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;font-family:Archivo,sans-serif;color:#13213f;background:#f6f7fb;
+background-image:linear-gradient(#e2e7f3 1px,transparent 1px),linear-gradient(90deg,#e2e7f3 1px,transparent 1px);background-size:24px 24px}
+header{display:flex;align-items:center;justify-content:space-between;height:72px;padding:0 48px;background:#13213f;color:#fff}
+.logo{font-weight:900;font-stretch:75%;font-size:26px;letter-spacing:.02em}
+nav{display:flex;gap:32px;font-size:15px;opacity:.85}
+.hcta{display:flex;gap:12px;align-items:center}
+.tel{font-weight:700;font-size:17px}
+.btn{background:#f3e14a;color:#13213f;font-weight:800;padding:12px 18px;font-size:15px}
+main{display:grid;grid-template-columns:504px 1fr;gap:48px;padding:48px}
+h1{font-weight:900;font-stretch:62%;font-size:132px;line-height:.86;text-transform:uppercase;letter-spacing:-.01em}
+h1 mark{background:linear-gradient(transparent 55%,#f3e14a 55%);color:inherit}
+.lead{margin-top:28px;font-size:20px;line-height:1.45;max-width:440px}
+form{margin-top:32px;background:#fff;border:2px solid #13213f;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+form b{grid-column:1/-1;font-size:24px;font-stretch:80%}
+.in{border:1.5px solid #9aa6c2;height:48px}
+.sub{grid-column:1/-1;background:#13213f;color:#fff;height:52px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px}
+.tt{background:#fff;border:2px solid #13213f;padding:24px 24px 20px;position:relative}
+.tt h2{font-size:30px;font-stretch:75%;font-weight:900;text-transform:uppercase;display:flex;justify-content:space-between}
+.tt h2 span{color:#e0402a;font-size:24px}
+.ruler{display:grid;grid-template-columns:160px repeat(12,1fr);margin-top:18px;border-bottom:2px solid #13213f;font-size:14px;font-weight:700}
+.ruler span{padding:6px 0;border-left:1px solid #c8d0e2}
+.row{display:grid;grid-template-columns:160px repeat(12,1fr);height:84px;border-bottom:1px solid #c8d0e2;align-items:center;position:relative}
+.row>b{font-size:24px;font-stretch:80%;line-height:1}
+.blk{height:56px;display:flex;align-items:center;padding:0 14px;font-weight:800;font-size:24px}
+.now{position:absolute;top:58px;bottom:20px;left:calc(184px + (100% - 208px)*5.5/12);width:3px;background:#e0402a}
+.now i{position:absolute;top:0;left:8px;background:#e0402a;color:#fff;font-style:normal;font-weight:800;font-size:24px;padding:4px 10px;white-space:nowrap}
+.foot{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+.foot div{border:2px solid #13213f;background:#fff;padding:16px}
+.foot strong{display:block;font-size:56px;font-stretch:62%;font-weight:900;line-height:1}
+</style></head><body>
+<header><div class="logo">ER TECRÜBE</div><nav><span>YKS</span><span>LGS</span><span>Kabin</span><span>Saatler</span><span>İletişim</span></nav><div class="hcta"><span class="tel">0442 442 52 25</span><span class="btn">Ön kayıt</span></div></header>
+<main>
+<section><h1>Sabah 9.<br>Akşam 9.<br><mark>Hedef</mark> belli.</h1>
+<p class="lead">Erzurum'da YKS ve LGS hazırlık. Kabin sistemi, birebir özel ders, koçluk ve düzenli deneme sınavları.</p>
+<form><b>Ön kayıt bırakın, sizi arayalım</b><div class="in"></div><div class="in"></div><div class="sub">Ön kayıt bırak</div></form></section>
+<section class="tt"><h2>Bugünkü program <span>Pazartesi</span></h2>
+<div class="ruler"><span></span><span>09</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span></div>
+<div class="row"><b>YKS<br>Mezun</b><div class="blk" style="grid-column:2/14;background:#13213f;color:#fff">Kabin + ders · 09:00–21:00</div></div>
+<div class="row"><b>YKS<br>9–12. sınıf</b><div class="blk" style="grid-column:10/14;background:#2f5bd3;color:#fff">17:00–21:00</div></div>
+<div class="row"><b>LGS<br>hafta içi</b><div class="blk" style="grid-column:10/14;background:#f3e14a">17:00–21:00</div></div>
+<div class="row"><b>LGS<br>hafta sonu</b><div class="blk" style="grid-column:2/11;background:#fff;border:2px dashed #13213f">Cumartesi–Pazar · 09:00–18:00</div></div>
+<div class="now"><i>Şu an 14:30 · Mezun kabinleri açık</i></div>
+<div class="foot"><div><strong>234</strong>gün · YKS 2027 (tahmini)</div><div><strong>12</strong>kişilik sınıflar</div><div><strong>2020</strong>'den beri Erzurum'da</div></div>
+</section></main></body></html>

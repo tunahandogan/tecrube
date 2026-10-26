@@ -1,0 +1,239 @@
+{
+  "title": "Er Tecrübe — görsel yön seçimi",
+  "question": "Sitenin yeni görsel dünyasını seç. Her kart birinci ekranın taslağını gösterir (küçük yazılar çubuk olarak görünür; kompozisyon, renk ve başlık tipi okunur).",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Ders Programı",
+      "kicker": "THE ROLL",
+      "lineage": "Sınıf duvarındaki haftalık ders çizelgesi, kareli defter, kırmızı öğretmen kalemi",
+      "thesis": "Site, kurumun gerçek düzenini gösteren canlı bir ders programı: sabah 9, akşam 9.",
+      "palette": [
+        "#f6f7fb",
+        "#13213f",
+        "#2f5bd3",
+        "#f3e14a",
+        "#e0402a"
+      ],
+      "materials": [
+        "kareli defter ızgarası",
+        "fosforlu kalem blokları",
+        "kırmızı kalem 'şu an' çizgisi"
+      ],
+      "viewport": "Solda büyük dar grotesk başlık ve satır içi ön kayıt formu; sağda 09→21 saat cetveli üzerinde programların blokları ve canlı 'şu an' çizgisi.",
+      "risk": "Fosforlu renkler aşırıya kaçarsa okul defteri gibi çocuksu durabilir; renk yalnızca bloklarda kalmalı.",
+      "raised": [
+        {
+          "from": "challenger-rain-night-cityscape",
+          "raise": "Saat cetveli gerçek zamana bağlı: sayfa o an hangi programın derste olduğunu gösterir."
+        },
+        {
+          "from": "challenger-paper-menagerie",
+          "raise": "Kırmızı yalnızca 'şu an' ve seçili duruma ayrıldı; başka hiçbir yerde kullanılmaz."
+        },
+        {
+          "from": "challenger-step-row",
+          "raise": "09→21 saat cetveli sayfanın kırılmayan tek çizgisi; mobilde sarılmaz, ölçeklenir."
+        },
+        {
+          "from": "challenger-arcade",
+          "raise": "Her öğe kareli ızgara birimine oturur; ızgara dışı yerleşim yok."
+        },
+        {
+          "from": "challenger-fight-poster",
+          "raise": "YKS ve LGS karşılaştırması ortak eksende iki ayna yarı olarak kurulur."
+        }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Erzurum Taşı ve Çini",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Çifte Minareli Medrese: 13. yüzyıldan kalma Erzurum okulu",
+      "thesis": "Erzurum'un en bilinen okulunun taşı ve çinisiyle, şehre kök salmış ciddi bir kurum.",
+      "palette": [
+        "#1f1c1a",
+        "#8c4a32",
+        "#e9e2d6",
+        "#1d7f86",
+        "#c7a25a"
+      ],
+      "materials": [
+        "koyu bazalt ve kızıl kesme taş",
+        "Selçuklu turkuaz çini",
+        "taç kapı geometrisi"
+      ],
+      "viewport": "Koyu taş zemin üzerinde taç kapı biçimli bir çerçeve; içinde başlık ve iki program kapısı (YKS / LGS), altta turkuaz çini bant.",
+      "risk": "Tanıdık ve 'yerel kurum' kalıbına yakın; ağır ve müze gibi okunabilir.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-ornament",
+      "kind": "challenger",
+      "catalogId": "design-canon-breton-ornament-program",
+      "label": "Erzurum Desen Programı",
+      "verdict": "competitive",
+      "lineage": "Yerel taş ve oyadan türetilmiş geometrik desen ve harf sistemi",
+      "thesis": "Kurumun kimliği, Erzurum taş oymalarından türetilmiş numaralı bir desen birimleri kitabı.",
+      "palette": [
+        "#3d4148",
+        "#e8e0cf",
+        "#a5322a"
+      ],
+      "materials": [
+        "düz baskı levha kâğıdı",
+        "ince çerçeve çizgisi",
+        "tekrarlanan geometrik birimler"
+      ],
+      "viewport": "Numaralı bir desen levhası; köşeli kurgulanmış harflerle başlık, programlar desen birimleri olarak dizili.",
+      "case": "Erzurumlu veli kendini tanır (yerellik ekseni güçlü) ama program/saat bilgisini Ders Programı kadar net anlatmaz.",
+      "risk": "Süslemeye kayarsa bilgi ikinci plana düşer.",
+      "html": ".impeccable/mocks/decision/challenger-ornament.html"
+    },
+    {
+      "id": "challenger-rain-night-cityscape",
+      "kind": "challenger",
+      "catalogId": "light-shadow-caustics-rain-night-cityscape",
+      "label": "Yağmurlu Gece Şehri",
+      "verdict": "declined",
+      "lineage": "mavi saatten geceye kent",
+      "thesis": "Şehrin saatlerini ışıklarla okuyan gece manzarası.",
+      "palette": [
+        "#14224a",
+        "#0b0c10",
+        "#f2a33a",
+        "#c9d1d9"
+      ],
+      "materials": [
+        "ıslak sokak yansıması",
+        "neon"
+      ],
+      "viewport": "Gece silüeti üzerinde saat bantları.",
+      "case": "Veli kendini tanımaz, program bilgisi zayıflar.",
+      "kept": "Zamana bağlı durum: sayfa o anki saati okur.",
+      "risk": "Kurumla ilgisiz bir atmosfer."
+    },
+    {
+      "id": "challenger-paper-menagerie",
+      "kind": "challenger",
+      "catalogId": "kinetic-sculpture-automata-crank-paper-menagerie",
+      "label": "Kağıt Otomat",
+      "verdict": "declined",
+      "lineage": "kollu kağıt mekanizmalar",
+      "thesis": "Kolu çevirdikçe ilerleyen kağıt figürler.",
+      "palette": [
+        "#f4f1ea",
+        "#b89a6e",
+        "#2a2a2a",
+        "#c2252d"
+      ],
+      "materials": [
+        "kesik kağıt",
+        "kraft karton"
+      ],
+      "viewport": "Kağıt figür alayı.",
+      "case": "Çocuksu okunur; kullanıcının istemediği tam olarak bu.",
+      "kept": "Tek renk yalnızca hareket eden/seçili öğeye ayrılır.",
+      "risk": "Oyuncak gibi durur."
+    },
+    {
+      "id": "challenger-step-row",
+      "kind": "challenger",
+      "catalogId": "signals-instruments-drum-machine-step-row",
+      "label": "Ritim Makinesi",
+      "verdict": "declined",
+      "lineage": "80'ler ritim makinesi adım sırası",
+      "thesis": "On altı adımlık ışıklı sıra.",
+      "palette": [
+        "#2b2b2e",
+        "#d8382c",
+        "#f08a24",
+        "#f4d03f",
+        "#f2f2f2"
+      ],
+      "materials": [
+        "silkscreen panel",
+        "LED"
+      ],
+      "viewport": "Adım tuşları ve tempo göstergesi.",
+      "case": "Eğitimle bağı yok.",
+      "kept": "Sayfanın kırılmayan tek çizgisi (saat cetveli).",
+      "risk": "Alet kostümü."
+    },
+    {
+      "id": "challenger-arcade",
+      "kind": "challenger",
+      "catalogId": "medium-native-crt-arcade-pixel-glow",
+      "label": "Atari Ekranı",
+      "verdict": "declined",
+      "lineage": "piksel arcade",
+      "thesis": "Piksel ızgarada parlayan sahne.",
+      "palette": [
+        "#050505",
+        "#29adff",
+        "#ff004d",
+        "#ffec27"
+      ],
+      "materials": [
+        "scanline",
+        "fosfor"
+      ],
+      "viewport": "Piksel menü ve skor satırı.",
+      "case": "Veliye güven vermez.",
+      "kept": "Izgara disiplini: hiçbir öğe ızgara dışına taşmaz.",
+      "risk": "Oyun sitesi gibi."
+    },
+    {
+      "id": "challenger-fight-poster",
+      "kind": "challenger",
+      "catalogId": "posters-covers-sleeves-fight-poster",
+      "label": "Maç Afişi",
+      "verdict": "declined",
+      "lineage": "boks afişi",
+      "thesis": "İki ismin VS ile çarpıştığı afiş.",
+      "palette": [
+        "#efe6d2",
+        "#111111",
+        "#c9a227"
+      ],
+      "materials": [
+        "gazete kâğıdı",
+        "slab harf"
+      ],
+      "viewport": "YKS VS LGS.",
+      "case": "Programları rakip gibi gösterir; ton yanlış.",
+      "kept": "Karşılaştırma ortak eksende iki ayna yarı.",
+      "risk": "Agresif ton."
+    }
+  ],
+  "reroll": {
+    "registers": [
+      "safer",
+      "bolder"
+    ]
+  },
+  "buildPath": {
+    "value": "code"
+  },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "Klasik dershane sitesi",
+    "thesis": "Lacivert-turuncu, büyük fotoğraflı hero, sayaç bandı, program kartları; kusursuz işçilikle.",
+    "palette": [
+      "#ffffff",
+      "#0f2a5c",
+      "#f27a1a"
+    ],
+    "materials": [
+      "temiz ızgara",
+      "kurum fotoğrafları"
+    ],
+    "viewport": "Fotoğraf üzerinde başlık ve 'Ön Kayıt' butonu, altında üç program kartı.",
+    "risk": "Erzurum'daki her dershaneyle aynı görünür; ayrıca henüz kurum fotoğrafı yok."
+  },
+  "steer": true
+}
